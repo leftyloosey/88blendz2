@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import blendz from '../images/88blendz.jpeg'
 import './css/style.css'
 
@@ -48,23 +47,23 @@ const Nav = () => {
               Book
             </a>
           </div>
-
-          <button
-            className={
-              isActive
-                ? 'open block hamburger lg:hidden focus:outline-none'
-                : 'block hamburger lg:hidden focus:outline-none'
-            }
-            onClick={handleClick}
-            id='menu-btn'
-            type='button'
-          >
-            <span className='hamburger-top'></span>
-            <span className='hamburger-middle'></span>
-            <span className='hamburger-bottom'></span>
-          </button>
+          <div className='mr-6 mx-auto'>
+            <button
+              className={
+                isActive
+                  ? 'open block hamburger lg:hidden focus:outline-none'
+                  : 'block hamburger lg:hidden focus:outline-none'
+              }
+              onClick={handleClick}
+              id='menu-btn'
+              type='button'
+            >
+              <span className='hamburger-top'></span>
+              <span className='hamburger-middle'></span>
+              <span className='hamburger-bottom'></span>
+            </button>
+          </div>
         </div>
-
         <div
           id='menu'
           className='absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100'
