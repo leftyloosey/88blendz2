@@ -17,7 +17,6 @@ const Body = () => {
             <h4 className='text-4xl text-white font-bold text-center lg:text-6xl lg:max-w-md lg:text-left'>
               A barbershop in a place you wouldn't expect.
             </h4>
-            <img src={qrCode} alt='' />
             <div className='mx-auto lg:mx-0'>
               <a
                 href={blendLink}
