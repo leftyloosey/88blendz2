@@ -10,7 +10,7 @@ const Body = () => {
   //   })
 
   return (
-    <div>
+    <div className='bg-black'>
       <section id='hero' className='rounded-[130px]'>
         <div className='container flex flex-col-reverse mx-auto p-6 lg:flex-row'>
           <div className='flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52'>

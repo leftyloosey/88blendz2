@@ -66,22 +66,29 @@ const Nav = () => {
         </div>
         <div
           id='menu'
-          className='absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100'
+          className={
+            isActive
+              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6'
+              : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6'
+          }
         >
           <div className='flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm'>
-            <a href='#b' className='w-full text-center'>
+            <a
+              href='#b'
+              className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-6'
+            >
               Cuts
             </a>
-            <a href='#c' className='w-full text-center'>
+            <a href='#c' className='w-full text-center text-[#FDB927]'>
               Merch
             </a>
 
-            <a
+            {/* <a
               href='#d'
               className='w-full py-3 text-[#FDB927] border border-gray-500 text-center rounded-full bg-[#552583] hover:brightness-75'
             >
               Login
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>
