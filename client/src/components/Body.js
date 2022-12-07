@@ -27,9 +27,7 @@ const Body = () => {
             </div>
           </div>
 
-          <div className='mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2'>
-            <img src='shortly.png' alt='' />
-          </div>
+          <div className='mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2'></div>
         </div>
       </section>
     </div>
