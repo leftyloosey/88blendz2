@@ -11,7 +11,7 @@ const Body = () => {
 
   return (
     <div>
-      <section id='hero' className='rounded-[200px]'>
+      <section id='hero' className='rounded-[130px]'>
         <div className='container flex flex-col-reverse mx-auto p-6 lg:flex-row'>
           <div className='flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52'>
             <h4 className='text-4xl text-white font-bold text-center lg:text-6xl lg:max-w-md lg:text-left'>
