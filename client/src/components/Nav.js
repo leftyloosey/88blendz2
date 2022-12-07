@@ -2,6 +2,9 @@ import { useState } from 'react'
 import blendz from '../images/88blendz.jpeg'
 import './css/style.css'
 
+const blendLink =
+  'https://booksy.com/en-us/781756_88blendz-studio_barber-shop_37796_salt-lake-city#ba_s=vl_1'
+
 const Nav = () => {
   const [isActive, setIsActive] = useState(false)
 
@@ -41,7 +44,7 @@ const Nav = () => {
 
           <div className='hidden items-center space-x-6 font-bold text-grayishViolet lg:flex'>
             <a
-              href='#a'
+              href={blendLink}
               className='px-8 py-3 font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927]'
             >
               Book
@@ -68,7 +71,7 @@ const Nav = () => {
           id='menu'
           className={
             isActive
-              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6'
+              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6 sm:mt-12 md:mt-24'
               : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6'
           }
         >
