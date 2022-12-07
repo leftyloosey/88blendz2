@@ -47,7 +47,7 @@ const Nav = () => {
               Book
             </a>
           </div>
-          <div className='mr-6 mx-auto'>
+          <div className='mr-12'>
             <button
               className={
                 isActive
