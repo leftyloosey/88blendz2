@@ -1,22 +1,14 @@
 import './css/style.css'
-import QRCode from 'qrcode'
+// import QRCode from 'qrcode'
 
 const blendLink =
   'https://booksy.com/en-us/781756_88blendz-studio_barber-shop_37796_salt-lake-city#ba_s=vl_1'
 
 const Body = () => {
-  const qrCode = QRCode.toDataURL(blendLink, (err, url) => {
-    console.log(url)
-  })
-  //   const qrCode = QRCode.toString(
-  //     blendLink,
-  //     { type: 'terminal' },
-  //     function (err, url) {
-  //       console.log(url)
-  //     }
-  //   )
-  //   const qrCode = QRCode.toDataURL(blendLink)
-  //   console.log(qrCode)
+  //   const qrCode = QRCode.toDataURL(blendLink, (err, url) => {
+  //     console.log(url)
+  //   })
+
   return (
     <div>
       <section id='hero' className='rounded-[200px]'>
