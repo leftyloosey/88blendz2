@@ -6,6 +6,7 @@ import Gallery from './components/Gallery'
 import Barbers from './components/Barbers'
 // import Footer from './Footer'
 import Nav from './components/Nav'
+import './components/css/style.css'
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('')
@@ -23,17 +24,26 @@ const App = () => {
     return <Front />
   }
 
-  const handlePageChange = (page) => setCurrentPage(page)
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+  }
 
   return (
     // <div>
 
-    <div id='hero' className='flex flex-row'>
-      <div className=''>
-        <Blendz />
-        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-        <div className='flex flex-col'>{renderPage()}</div>
+    <div id='hero' className='flex flex-col'>
+      <div className='flex flex-row justify-between'>
+        <div className='w-2/5 h-auto'>
+          <Blendz />
+        </div>
+
+        <div className='flex items-end left-16'>
+          <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+        </div>
       </div>
+
+      <div className=''>{renderPage()}</div>
+
       {/* <Footer /> */}
     </div>
   )

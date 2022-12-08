@@ -10,7 +10,7 @@ const Front = () => {
   //   })
 
   return (
-    <div className='rounded-lg'>
+    <div>
       <section className='sm:rounded-md md:rounded-md lg:rounded-lg'>
         <div className='container flex flex-col-reverse mx-auto p-6 lg:flex-row'>
           <div className='flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52'>
@@ -22,7 +22,7 @@ const Front = () => {
                 href={blendLink}
                 className='py-5 px-10 text-2xl duration-500 font-bold text-white bg-[#552583] rounded-full lg:py-4 hover:brightness-105 hover:text-[#FDB927]'
               >
-                Book
+                Book Appointment
               </a>
             </div>
           </div>

@@ -11,86 +11,100 @@ const Nav = ({ currentPage, handlePageChange }) => {
   }
   return (
     <>
-      <nav className='relative container mx-auto p-6 '>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center space-x-20'>
-            <div className='hidden space-x-8 duration-500 font-bold lg:flex'>
+      {/* <nav className='relative container mx-auto p-6 '> */}
+      <nav className=''>
+        <div className=''>
+          {/* <div className='flex items-center justify-between'> */}
+          <div className='flex flex-row'>
+            {/* <div className='flex items-center space-x-20'> */}
+            {/* <div className='space-x-8 duration-500 font-bold lg:flex'> */}
+            <div className='invisible ml-3 space-x-2 duration-500 font-bold md:visible pt-14'>
               <a
                 href='#a'
                 onClick={() => handlePageChange('Gallery')}
-                className='text-[#FDB927] duration-500 hover:text-[#552583]'
+                className='text-[#552583] duration-500 hover:text-[#FDB927]'
               >
                 Gallery
               </a>
               <a
                 href='#b'
                 onClick={() => handlePageChange('Merch')}
-                className='text-[#FDB927] duration-500 hover:text-[#552583]'
+                className='text-[#552583] duration-500 hover:text-[#FDB927]'
               >
                 Merch
               </a>
               <a
                 href='#c'
                 onClick={() => handlePageChange('Barbers')}
-                className='text-[#FDB927] duration-500 hover:text-[#552583]'
+                className='text-[#552583] duration-500 hover:text-[#FDB927]'
               >
                 Barbers
               </a>
-            </div>
-          </div>
 
-          <div className='hidden items-center space-x-6 font-bold text-grayishViolet lg:flex'>
-            <a
-              href={blendLink}
-              className='px-8 py-3 font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927]'
-            >
-              Book
-            </a>
-          </div>
-          <div className='mr-6 -mt-40'>
-            <button
-              className={
-                isActive
-                  ? 'open block hamburger lg:hidden focus:outline-none'
-                  : 'block hamburger lg:hidden focus:outline-none'
-              }
-              onClick={handleClick}
-              id='menu-btn'
-              type='button'
-            >
-              <span className='hamburger-top'></span>
-              <span className='hamburger-middle'></span>
-              <span className='hamburger-bottom'></span>
-            </button>
+              {/* <div className='flex flex-row font-bold text-grayishViolet'>
+                <a
+                  href={blendLink}
+                  className='px-6 pt-4 mt-24 items-center font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927] sm:visible'
+                >
+                  Book
+                </a>
+              </div> */}
+            </div>
+            <div id='3 lines' className='p-16'>
+              <button
+                className={
+                  isActive
+                    ? 'open block hamburger lg:hidden focus:outline-none'
+                    : 'block hamburger lg:hidden focus:outline-none'
+                }
+                onClick={handleClick}
+                id='menu-btn'
+                type='button'
+              >
+                <span className='hamburger-top'></span>
+                <span className='hamburger-middle'></span>
+                <span className='hamburger-bottom'></span>
+              </button>
+            </div>
           </div>
         </div>
         <div
           id='menu'
+          onMouseLeave={handleClick}
           className={
             isActive
-              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100'
-              : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 '
+              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-15 z-100'
+              : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-15 z-100 '
           }
         >
-          <div className='flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm'>
+          <div className='flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm '>
+            <a
+              href={blendLink}
+              className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-3 bg-[#552583] rounded-full pt-3'
+            >
+              Book Appointment
+            </a>
             <a
               href='#b'
+              // onClick={() => handlePageChange('Cuts')}
               onClick={() => handlePageChange('Cuts')}
-              className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-6'
+              // className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-6'
+              className='w-full  text-center border-b-2 border-gray-500 pb-6'
             >
               Cuts
             </a>
             <a
               href='#c'
               onClick={() => handlePageChange('Merch')}
-              className='w-full text-center text-[#FDB927] border-b-2 border-gray-500 pb-6'
+              on
+              className='w-full text-center  border-b-2 border-gray-500 pb-6'
             >
               Merch
             </a>
             <a
               href='#c'
               onClick={() => handlePageChange('Barbers')}
-              className='w-full text-center text-[#FDB927]'
+              className='w-full text-center '
             >
               Barbers
             </a>
