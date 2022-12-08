@@ -417,6 +417,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
+  border-bottom-right-radius: 70px;
 }
 
 /*

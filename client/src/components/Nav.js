@@ -1,43 +1,40 @@
 import { useState } from 'react'
-import blendz from '../images/88blendz.jpeg'
 import './css/style.css'
 
 const blendLink =
   'https://booksy.com/en-us/781756_88blendz-studio_barber-shop_37796_salt-lake-city#ba_s=vl_1'
 
-const Nav = () => {
+const Nav = ({ currentPage, handlePageChange }) => {
   const [isActive, setIsActive] = useState(false)
-
   const handleClick = (event) => {
     setIsActive((current) => !current)
   }
   return (
     <>
-      <nav className='relative container mx-auto p-6'>
+      <nav className='relative container mx-auto p-6 '>
         <div className='flex items-center justify-between'>
           <div className='flex items-center space-x-20'>
-            <div className='flex items-start w-1/2 h-1/4 invert'>
-              <img src={blendz} alt='' />
-            </div>
-
             <div className='hidden space-x-8 duration-500 font-bold lg:flex'>
               <a
                 href='#a'
+                onClick={() => handlePageChange('Gallery')}
                 className='text-[#FDB927] duration-500 hover:text-[#552583]'
               >
-                Cuts
+                Gallery
               </a>
               <a
                 href='#b'
+                onClick={() => handlePageChange('Merch')}
                 className='text-[#FDB927] duration-500 hover:text-[#552583]'
               >
                 Merch
               </a>
               <a
                 href='#c'
+                onClick={() => handlePageChange('Barbers')}
                 className='text-[#FDB927] duration-500 hover:text-[#552583]'
               >
-                About
+                Barbers
               </a>
             </div>
           </div>
@@ -50,7 +47,7 @@ const Nav = () => {
               Book
             </a>
           </div>
-          <div className='mr-12'>
+          <div className='mr-6 -mt-40'>
             <button
               className={
                 isActive
@@ -71,19 +68,31 @@ const Nav = () => {
           id='menu'
           className={
             isActive
-              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6 sm:mt-12 md:mt-24'
-              : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 mt-6'
+              ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100'
+              : 'absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 '
           }
         >
           <div className='flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm'>
             <a
               href='#b'
+              onClick={() => handlePageChange('Cuts')}
               className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-6'
             >
               Cuts
             </a>
-            <a href='#c' className='w-full text-center text-[#FDB927]'>
+            <a
+              href='#c'
+              onClick={() => handlePageChange('Merch')}
+              className='w-full text-center text-[#FDB927] border-b-2 border-gray-500 pb-6'
+            >
               Merch
+            </a>
+            <a
+              href='#c'
+              onClick={() => handlePageChange('Barbers')}
+              className='w-full text-center text-[#FDB927]'
+            >
+              Barbers
             </a>
 
             {/* <a
