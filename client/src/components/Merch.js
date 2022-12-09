@@ -10,7 +10,7 @@ const Merch = ({ handleClick, isActive }) => {
   return (
     <div
       onLoad={() => handleClick()}
-      className='bg-black flex flex-col justify-center p-2 items-center md:flex-wrap '
+      className='flex flex-col justify-center p-2 items-center md:flex-wrap '
     >
       <div className='w-3/4 h-auto space-y-3'>
         {pics.map((pic) => (
