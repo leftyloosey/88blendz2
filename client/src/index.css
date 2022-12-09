@@ -412,12 +412,16 @@ object {
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
+.gals {
+  border-radius: 20px;
+}
 
 img,
 video {
   max-width: 100%;
   /* height: auto; */
-  border-bottom-right-radius: 70px;
+  /* border-radius:  */
+  border-bottom-right-radius: 8px;
 }
 
 /*

@@ -32,7 +32,7 @@ const App = () => {
     // <div>
 
     <div id='hero' className='flex flex-col'>
-      <div className='flex flex-row justify-between'>
+      <div className='z-100 fixed top-0 flex flex-row justify-between'>
         <div className='w-2/5 h-1/5'>
           <Blendz />
         </div>
@@ -42,7 +42,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className=''>{renderPage()}</div>
+      <div className='mt-20 pt-20'>{renderPage()}</div>
 
       {/* <Footer /> */}
     </div>
