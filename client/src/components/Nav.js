@@ -92,11 +92,11 @@ const Nav = ({ currentPage, handlePageChange }) => {
             <a
               href='#b'
               // onClick={() => handlePageChange('Cuts')}
-              onClick={() => handlePageChange('Cuts')}
+              onClick={() => handlePageChange('Gallery')}
               // className='w-full text-[#FDB927] text-center border-b-2 border-gray-500 pb-6'
               className='w-full  text-center border-b-2 border-gray-500 pb-6'
             >
-              Cuts
+              Gallery
             </a>
             <a
               href='#c'
