@@ -1,7 +1,8 @@
 import product1 from '../images/image-hero.jpg'
 import product2 from '../images/fax.webp'
+import product3 from '../images/book.jpeg'
 
-const pics = [product1, product2, product1]
+const pics = [product1, product2, product3]
 
 const Merch = ({ handleClick, isActive }) => {
   console.log(isActive)
@@ -9,7 +10,7 @@ const Merch = ({ handleClick, isActive }) => {
   return (
     <div
       onLoad={() => handleClick()}
-      className='flex flex-col justify-center p-2 items-center md:flex-wrap '
+      className='bg-black flex flex-col justify-center p-2 items-center md:flex-wrap '
     >
       <div className='w-3/4 h-auto space-y-3'>
         {pics.map((pic) => (

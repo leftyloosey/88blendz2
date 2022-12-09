@@ -1,7 +1,7 @@
 import pic1 from '../images/gallery/img1.jpeg'
 import pic2 from '../images/gallery/img2.jpeg'
-import pic3 from '../images/gallery/img4.jpeg'
-import pic4 from '../images/gallery/img3.jpeg'
+import pic3 from '../images/gallery/img3.jpeg'
+import pic4 from '../images/gallery/img4.jpeg'
 import pic6 from '../images/gallery/img6.jpeg'
 import pic7 from '../images/gallery/img7.jpeg'
 import pic8 from '../images/gallery/img8.jpeg'
@@ -15,7 +15,7 @@ const Gallery = ({ handleClick, isActive }) => {
   return (
     <div
       onLoad={() => handleClick()}
-      className='flex flex-col justify-center p-2 items-center md:flex-wrap '
+      className='bg-black flex flex-col justify-center p-2 items-center md:flex-wrap '
     >
       <div className='w-3/4 h-auto space-y-3'>
         {pics.map((pic) => (
