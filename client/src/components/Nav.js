@@ -78,7 +78,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
         <div
           id='menu'
           onMouseLeave={handleClick}
-          onTouchEnd={handleClick}
+          onTouchCancel={handleClick}
           className={
             isActive
               ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-15 z-100'
