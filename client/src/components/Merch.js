@@ -3,9 +3,14 @@ import product2 from '../images/fax.webp'
 
 const pics = [product1, product2, product1]
 
-const Merch = () => {
+const Merch = ({ handleClick, isActive }) => {
+  console.log(isActive)
+
   return (
-    <div className='flex flex-col justify-center p-2 items-center md:flex-wrap '>
+    <div
+      onLoad={() => handleClick()}
+      className='flex flex-col justify-center p-2 items-center md:flex-wrap '
+    >
       <div className='w-3/4 h-auto space-y-3'>
         {pics.map((pic) => (
           <div>

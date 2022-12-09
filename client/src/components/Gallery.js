@@ -10,9 +10,13 @@ import pic8 from '../images/gallery/img8.jpeg'
 
 const pics = [pic1, pic2, pic3, pic4, pic6, pic7, pic8]
 
-const Gallery = () => {
+const Gallery = ({ handleClick, isActive }) => {
+  console.log(isActive)
   return (
-    <div className='flex flex-col justify-center p-2 items-center md:flex-wrap '>
+    <div
+      onLoad={() => handleClick()}
+      className='flex flex-col justify-center p-2 items-center md:flex-wrap '
+    >
       <div className='w-3/4 h-auto space-y-3'>
         {pics.map((pic) => (
           <img

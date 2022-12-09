@@ -1,18 +1,17 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './css/style.css'
 
 const blendLink =
   'https://booksy.com/en-us/781756_88blendz-studio_barber-shop_37796_salt-lake-city#ba_s=vl_1'
 
-const Nav = ({ currentPage, handlePageChange }) => {
-  const [isActive, setIsActive] = useState(false)
-  const handleClick = (event) => {
-    setIsActive((current) => !current)
-  }
+const Nav = ({ currentPage, handlePageChange, handleClick, isActive }) => {
+  // const [isActive, setIsActive] = useState(false)
+  // const handleClick = (event) => {
+  //   setIsActive((current) => !current)
+  // }
 
   return (
     <>
-      {() => handleClick}
       {/* <nav className='relative container mx-auto p-6 '> */}
       <nav className=''>
         <div className=''>
@@ -78,6 +77,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
         <div
           id='menu'
           onMouseLeave={handleClick}
+          onLoad={handleClick}
           className={
             isActive
               ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-15 z-100'

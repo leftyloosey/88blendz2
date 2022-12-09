@@ -1,7 +1,9 @@
-const Barbers = () => {
+const Barbers = ({ handleClick, isActive }) => {
+  console.log(isActive)
+
   return (
     <div>
-      <h1>Barbers</h1>
+      <h1 onLoad={() => handleClick()}>Barbers</h1>
     </div>
   )
 }

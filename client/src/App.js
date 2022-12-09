@@ -9,17 +9,21 @@ import Nav from './components/Nav'
 import './components/css/style.css'
 
 const App = () => {
+  const [isActive, setIsActive] = useState(false)
+  const handleClick = (event) => {
+    setIsActive((current) => !current)
+  }
   const [currentPage, setCurrentPage] = useState('')
 
   const renderPage = () => {
     if (currentPage === 'Merch') {
-      return <Merch />
+      return <Merch isActive={isActive} handleClick={handleClick} />
     }
     if (currentPage === 'Gallery') {
-      return <Gallery />
+      return <Gallery isActive={isActive} handleClick={handleClick} />
     }
     if (currentPage === 'Barbers') {
-      return <Barbers />
+      return <Barbers isActive={isActive} handleClick={handleClick} />
     }
     return <Front />
   }
@@ -38,7 +42,12 @@ const App = () => {
         </div>
 
         <div className=''>
-          <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+          <Nav
+            isActive={isActive}
+            handleClick={handleClick}
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
         </div>
       </div>
 
