@@ -9,8 +9,10 @@ const Nav = ({ currentPage, handlePageChange }) => {
   const handleClick = (event) => {
     setIsActive((current) => !current)
   }
+
   return (
     <>
+      {() => handleClick}
       {/* <nav className='relative container mx-auto p-6 '> */}
       <nav className=''>
         <div className=''>
@@ -76,6 +78,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
         <div
           id='menu'
           onMouseLeave={handleClick}
+          onTouchEnd={handleClick}
           className={
             isActive
               ? 'absolute p-6 rounded-lg bg-darkViolet left-6 right-6 top-15 z-100'
