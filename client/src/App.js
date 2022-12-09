@@ -33,11 +33,11 @@ const App = () => {
 
     <div id='hero' className='flex flex-col'>
       <div className='flex flex-row justify-between'>
-        <div className='w-2/5 h-auto'>
+        <div className='w-2/5 h-1/5'>
           <Blendz />
         </div>
 
-        <div className='flex items-end left-16'>
+        <div className=''>
           <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
         </div>
       </div>

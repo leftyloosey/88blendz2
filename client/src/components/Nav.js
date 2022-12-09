@@ -15,10 +15,10 @@ const Nav = ({ currentPage, handlePageChange }) => {
       <nav className=''>
         <div className=''>
           {/* <div className='flex items-center justify-between'> */}
-          <div className='flex flex-row'>
+          <div className='sm:flex flex-row p-5'>
             {/* <div className='flex items-center space-x-20'> */}
             {/* <div className='space-x-8 duration-500 font-bold lg:flex'> */}
-            <div className='invisible ml-3 space-x-2 duration-500 font-bold md:visible pt-14'>
+            <div className='hidden md:block space-x-2 font-bold pr-2'>
               <a
                 href='#a'
                 onClick={() => handlePageChange('Gallery')}
@@ -40,31 +40,36 @@ const Nav = ({ currentPage, handlePageChange }) => {
               >
                 Barbers
               </a>
-
-              {/* <div className='flex flex-row font-bold text-grayishViolet'>
-                <a
-                  href={blendLink}
-                  className='px-6 pt-4 mt-24 items-center font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927] sm:visible'
-                >
-                  Book
-                </a>
-              </div> */}
             </div>
-            <div id='3 lines' className='p-16'>
-              <button
-                className={
-                  isActive
-                    ? 'open block hamburger lg:hidden focus:outline-none'
-                    : 'block hamburger lg:hidden focus:outline-none'
-                }
-                onClick={handleClick}
-                id='menu-btn'
-                type='button'
+            <div className='flex flex-row space-x-3'>
+              <a
+                href={blendLink}
+                className='items-center px-4 font-bold text-[#552583] duration-500 bg-[#FDB927] rounded-full hover:brightness-105 hover:text-[#FDB927] outline'
+                // className='px-6 pt-4 mt-24 items-center font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927] sm:visible'
               >
-                <span className='hamburger-top'></span>
-                <span className='hamburger-middle'></span>
-                <span className='hamburger-bottom'></span>
-              </button>
+                Book
+              </a>
+              {/* <div className='flex flex-row font-bold text-grayishViolet'> */}
+              <div className='pt-0.5 visible sm:invisible'>
+                <div id='3 lines' className=''>
+                  <button
+                    className={
+                      isActive
+                        ? 'open block hamburger lg:hidden focus:outline-none'
+                        : 'block hamburger lg:hidden focus:outline-none'
+                    }
+                    onClick={handleClick}
+                    id='menu-btn'
+                    type='button'
+                  >
+                    <span className='hamburger-top'></span>
+                    <span className='hamburger-middle'></span>
+                    <span className='hamburger-bottom'></span>
+                  </button>
+                </div>
+
+                {/* <div id='3 lines' className='absolute top-6 right-8 md:invisible'> */}
+              </div>
             </div>
           </div>
         </div>
