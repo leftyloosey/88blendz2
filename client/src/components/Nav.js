@@ -44,7 +44,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
             <div className='flex flex-row space-x-3'>
               <a
                 href={blendLink}
-                className='items-center px-4 font-bold text-[#552583] duration-500 bg-[#FDB927] rounded-full hover:brightness-105 hover:text-[#FDB927] outline'
+                className='items-center px-4 font-bold text-[#552583] duration-500 bg-[#FDB927] rounded-full hover:brightness-105 hover:text-[#FDB927]'
                 // className='px-6 pt-4 mt-24 items-center font-bold bg-[#552583] duration-500 text-white rounded-full hover:brightness-105 hover:text-[#FDB927] sm:visible'
               >
                 Book
