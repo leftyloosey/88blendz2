@@ -4,7 +4,7 @@ const Barbers = ({ handleClick, isActive }) => {
   console.log(isActive)
 
   return (
-    <div onTouchStart={() => handleClick()}>
+    <div className='bg-white' onLoad={() => handleClick()}>
       {/* {!isActive ? handleClick() : handleClick()} */}
       {/* <img src={product3} alt='' onLoad={() => handleClick()}></img> */}
       <h1>Barbers</h1>

@@ -51,7 +51,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className='mt-20 pt-20'>{renderPage()}</div>
+      <div className='flex mt-20 pt-20 mb-100'>{renderPage()}</div>
 
       {/* <Footer /> */}
     </div>
