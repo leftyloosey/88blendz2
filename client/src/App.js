@@ -1,60 +1,29 @@
-import { useState } from 'react'
-import Blendz from './components/Blendz'
-import Front from './components/Front'
-import Merch from './components/Merch'
-import Gallery from './components/Gallery'
-import Barbers from './components/Barbers'
-// import Footer from './Footer'
-import Nav from './components/Nav'
-import './components/css/style.css'
+import { Routes, Route } from 'react-router-dom'
+import SignUpList from './pages/SignUpList'
+// import Home from './pages/Home'
+import Practice from './pages/Practice'
+import Practice2 from './pages/Practice2'
+import Merch from './pages/Merch'
+import ReadImage from './pages/ReadImage'
 
-const App = () => {
-  const [isActive, setIsActive] = useState(false)
-  const handleClick = (event) => {
-    setIsActive((current) => !current)
-  }
-  const [currentPage, setCurrentPage] = useState('')
-
-  const renderPage = () => {
-    if (currentPage === 'Merch') {
-      return <Merch isActive={isActive} handleClick={handleClick} />
-    }
-    if (currentPage === 'Gallery') {
-      return <Gallery isActive={isActive} handleClick={handleClick} />
-    }
-    if (currentPage === 'Barbers') {
-      return <Barbers isActive={isActive} handleClick={handleClick} />
-    }
-    return <Front />
-  }
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page)
-  }
-
+function App() {
   return (
-    // <div>
-
-    <div id='hero' className='flex flex-col'>
-      <div className='z-100 fixed top-0 flex flex-row justify-between'>
-        <div className='w-2/5 h-1/5'>
-          <Blendz />
-        </div>
-
-        <div className=''>
-          <Nav
-            isActive={isActive}
-            handleClick={handleClick}
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
-        </div>
-      </div>
-
-      <div className='flex mt-20 pt-20 mb-100'>{renderPage()}</div>
-
-      {/* <Footer /> */}
-    </div>
+    <>
+      <Routes>
+        {/* <Route path='/' element={<TheMap />} /> */}
+        {/* <Route path='/' element={<ReadImage />} /> */}
+        <Route path='/' element={<Practice2 />} />
+        {/* <Route index element={<Home />} /> */}
+        <Route path='/signuplist' element={<SignUpList />} />
+        <Route path='/practice' element={<Practice />} />
+        <Route path='/practice2' element={<Practice2 />} />
+        <Route path='/merch' element={<Merch />} />
+        <Route path='/readimage' element={<ReadImage />} />
+        {/* <Route path='*' element={<Home />} /> */}
+        {/* <Route path='*' element={<ReadImage />} /> */}
+        <Route path='*' element={<Practice2 />} />
+      </Routes>
+    </>
   )
 }
 
