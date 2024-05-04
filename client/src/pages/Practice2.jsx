@@ -54,7 +54,7 @@ const Practice2 = () => {
       <div className={`${load}`} onLoad={onLoad}>
         <div className='flex justify-center space-x-6 text-slate-400 text-sm opacity-80 mt-2'>
           <div className='hover:text-slate-300'>
-            <Link to='/signuplist'>SignUp</Link>
+            <Link to='/'>SignUp</Link>
           </div>
           <div className='hover:text-slate-300'>
             <Link to='/merch'>Merch</Link>
