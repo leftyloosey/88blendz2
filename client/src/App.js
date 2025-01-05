@@ -4,7 +4,6 @@ import SignUpList from './pages/SignUpList'
 import Practice from './pages/Practice'
 import Practice2 from './pages/Practice2'
 import Merch from './pages/Merch'
-import ReadImage from './pages/ReadImage'
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Route path='/practice' element={<Practice />} />
         <Route path='/practice2' element={<Practice2 />} />
         <Route path='/merch' element={<Merch />} />
-        <Route path='/readimage' element={<ReadImage />} />
         {/* <Route path='*' element={<Home />} /> */}
         {/* <Route path='*' element={<ReadImage />} /> */}
         <Route path='*' element={<Practice2 />} />
