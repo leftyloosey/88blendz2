@@ -102,7 +102,7 @@ const Practice2 = () => {
               </Link>
             </p>
           </div>
-          <div>
+          <div className='mt-4'>
             <TheMap />
           </div>
         </div>
