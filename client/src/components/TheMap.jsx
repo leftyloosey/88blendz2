@@ -15,12 +15,13 @@ const TheMap = () => (
     <Map
       mapId={id}
       className='mt-4 rounded h-96 w-full'
-      zoom={16}
+      zoom={15}
       center={{ lat, lng }}
       gestureHandling={'greedy'}
       disableDefaultUI={true}
     >
       <AdvancedMarker
+        // key={}
         position={{ lat, lng }}
         gmpClickable={true}
         onClick={() => {
@@ -105,6 +106,7 @@ const TheMap = () => (
 // }
 
 // export default React.memo(TheMap)
+
 // const TheMap = () => {
 //   const { isLoaded } = useJsApiLoader({
 //     id: id,
