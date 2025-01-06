@@ -14,10 +14,8 @@ import img4 from '../assets/images/gallery/img4.jpeg'
 import img6 from '../assets/images/gallery/img6.jpeg'
 import img7 from '../assets/images/gallery/img7.jpeg'
 import img8 from '../assets/images/gallery/img8.jpeg'
-import React, { Suspense } from 'react'
 
-// import TheMap from '../components/TheMap'
-const TheMap = React.lazy(() => import('../components/TheMap'))
+import TheMap from '../components/TheMap'
 
 const blendLink =
   'https://booksy.com/en-us/781756_88blendz-studio_barber-shop_37796_salt-lake-city#ba_s=vl_1'
@@ -107,9 +105,7 @@ const Practice2 = () => {
           <div className=''>
             {/* <TheMap /> */}
             <div>
-              <Suspense fallback={<div>Loading...</div>}>
-                <TheMap />
-              </Suspense>
+              <TheMap />
             </div>
           </div>
         </div>
