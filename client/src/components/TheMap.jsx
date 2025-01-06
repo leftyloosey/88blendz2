@@ -17,64 +17,65 @@ const center = {
   lat: lat,
   lng: lng,
 }
-// const TheMap = () => (
-//   <APIProvider apiKey={HOBART}>
-//     <Map
-//       mapId={id}
-//       className='mt-4 rounded h-96 w-full'
-//       zoom={15}
-//       center={{ lat, lng }}
-//       // gestureHandling={'cooperative'}
-//       // disableDefaultUI={true}\
-// onCameraChanged={ (ev: MapCameraChangedEvent) =>
-//   console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
-// }>
-//     >
-//       <AdvancedMarker
-//         // key={}
-//         position={{ lat, lng }}
-//         gmpClickable={true}
-//         onClick={() => {
-//           window.open(
-//             'https://www.google.com/maps/dir//2641+S+State+St+Suite+B,+Salt+Lake+City,+UT+84115/@40.7130787,-111.9703319,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87528bd13941b6e1:0xb1aa90e5f9f8f950!2m2!1d-111.8880075!2d40.7131082?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D',
-//             '_blank'
-//           )
-//         }}
-//       />
-//     </Map>
-//   </APIProvider>
-// )
-// export default TheMap
-
 const TheMap = () => {
-  const mapRef = useRef(null)
-
-  useEffect(() => {
-    const loader = new Loader({
-      apiKey: HOBART,
-      version: 'weekly',
-    })
-
-    loader.importLibrary('marker').then(() => {
-      const google = window.google
-      const map = new google.maps.Map(mapRef.current, {
-        center: { lat: lat, lng: lng }, // Replace with your desired center
-        zoom: 12,
-        mapId: id,
-      })
-      const AdvancedMarkerElement = google.maps.marker.AdvancedMarkerElement
-      // const { AdvancedMarkerElement } = google.maps.importLibrary('marker')
-
-      const marker = new AdvancedMarkerElement({
-        // id: id,
-        map,
-        position: { lat: lat, lng: lng },
-      })
-    })
-  }, [])
-
-  return <div ref={mapRef} style={{ height: '400px' }} />
+  return (
+    <APIProvider apiKey={HOBART}>
+      <Map
+        mapId={id}
+        className='mt-4 rounded h-96 w-full'
+        zoom={15}
+        center={{ lat, lng }}
+        // gestureHandling={'cooperative'}
+        // disableDefaultUI={true}
+      >
+        <AdvancedMarker
+          // key={}
+          position={{ lat, lng }}
+          gmpClickable={true}
+          onClick={() => {
+            window.open(
+              'https://www.google.com/maps/dir//2641+S+State+St+Suite+B,+Salt+Lake+City,+UT+84115/@40.7130787,-111.9703319,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87528bd13941b6e1:0xb1aa90e5f9f8f950!2m2!1d-111.8880075!2d40.7131082?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D',
+              '_blank'
+            )
+          }}
+        />
+      </Map>
+    </APIProvider>
+  )
 }
+export default TheMap
+
+// const TheMap = () => {
+//   const mapRef = useRef(null)
+//   const markerRef = useRef(null)
+
+//   useEffect(() => {
+//     const loader = new Loader({
+//       apiKey: HOBART,
+//       version: 'weekly',
+//     })
+
+//     loader.importLibrary('marker').then(() => {
+//       const google = window.google
+//       const map = new google.maps.Map(mapRef.current, {
+//         center: { lat: lat, lng: lng }, // Replace with your desired center
+//         zoom: 12,
+//         mapId: id,
+//       })
+//       const AdvancedMarkerElement = google.maps.marker.AdvancedMarkerElement
+//       // const { AdvancedMarkerElement } = google.maps.importLibrary('marker')
+
+//       const marker = new AdvancedMarkerElement({
+//         // id: id,
+//         map,
+//         position: { lat: lat, lng: lng },
+//         gmpClickable: true
+//       })
+//     })
+//   }, [])
+
+//   return <div ref={mapRef} style={{ height: '400px' }} />
+// }
 
 // const TheMap = () => {
 //   const { isLoaded } = useJsApiLoader({
@@ -114,4 +115,4 @@ const TheMap = () => {
 //   )
 // }
 
-export default React.memo(TheMap)
+// export default React.memo(TheMap)
