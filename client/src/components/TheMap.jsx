@@ -18,7 +18,7 @@ const TheMap = () => (
       zoom={15}
       center={{ lat, lng }}
       gestureHandling={'cooperative'}
-      disableDefaultUI={true}
+      // disableDefaultUI={true}
     >
       <AdvancedMarker
         // key={}
