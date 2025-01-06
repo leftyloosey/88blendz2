@@ -12,6 +12,7 @@ function App() {
         {/* <Route path='/' element={<TheMap />} /> */}
         {/* <Route path='/' element={<ReadImage />} /> */}
         <Route path='/' element={<Practice2 />} />
+
         {/* <Route index element={<Home />} /> */}
         <Route path='/signuplist' element={<SignUpList />} />
         <Route path='/practice' element={<Practice />} />
