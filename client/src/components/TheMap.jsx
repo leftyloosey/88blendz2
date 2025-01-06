@@ -17,7 +17,7 @@ const TheMap = () => (
       className='mt-4 rounded h-96 w-full'
       zoom={15}
       center={{ lat, lng }}
-      gestureHandling={'greedy'}
+      gestureHandling={'cooperative'}
       disableDefaultUI={true}
     >
       <AdvancedMarker
