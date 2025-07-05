@@ -102,11 +102,8 @@ const Practice2 = () => {
               </Link>
             </p>
           </div>
-          <div className=''>
-            {/* <TheMap /> */}
-            <div>
-              <TheMap />
-            </div>
+          <div className='mt-16'>
+            <TheMap />
           </div>
         </div>
       </div>

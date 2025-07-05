@@ -23,6 +23,7 @@ const TheMap = () => {
         mapId: id,
       })
       const AdvancedMarkerElement = google.maps.marker.AdvancedMarkerElement
+      console.log(mapRef)
 
       const marker = new AdvancedMarkerElement({
         map,
@@ -35,18 +36,21 @@ const TheMap = () => {
           'https://www.google.com/maps/dir//2641+S+State+St+Suite+B,+Salt+Lake+City,+UT+84115/@40.7130787,-111.9703319,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87528bd13941b6e1:0xb1aa90e5f9f8f950!2m2!1d-111.8880075!2d40.7131082?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D',
           '_blank'
         )
-        marker.removeEventListener('click', () => {
-          window.open(
-            'https://www.google.com/maps/dir//2641+S+State+St+Suite+B,+Salt+Lake+City,+UT+84115/@40.7130787,-111.9703319,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87528bd13941b6e1:0xb1aa90e5f9f8f950!2m2!1d-111.8880075!2d40.7131082?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D',
-            '_blank'
-          )
-        })
+        return () =>
+          marker.removeEventListener('click', () => {
+            window.open(
+              'https://www.google.com/maps/dir//2641+S+State+St+Suite+B,+Salt+Lake+City,+UT+84115/@40.7130787,-111.9703319,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87528bd13941b6e1:0xb1aa90e5f9f8f950!2m2!1d-111.8880075!2d40.7131082?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D',
+              '_blank'
+            )
+          })
       })
     })
   }, [])
 
   return (
-    <div className='mt-4 rounded' ref={mapRef} style={{ height: '400px' }} />
+    <div>
+      <div className='mt-4 rounded' ref={mapRef} style={{ height: '400px' }} />
+    </div>
   )
 }
 
