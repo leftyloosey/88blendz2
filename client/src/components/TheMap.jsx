@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { Loader } from '@googlemaps/js-api-loader'
 
-const HOBART = 'AIzaSyC0zTkwcKzG9r-sF6Xwtj3-WDgwSNDwdZ4'
+const HOBART = process.env.REACT_APP_HOBART
+console.log(HOBART)
+// const HOBART = 'AIzaSyC0zTkwcKzG9r-sF6Xwtj3-WDgwSNDwdZ4'
 const id = '298edbd82e7e7d1a'
 const lat = 40.713177524497084
 const lng = -111.88789891349388
